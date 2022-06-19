@@ -12,5 +12,7 @@
 4- git add *
 5- git commit -m "texto de descrição do commit"
 6- git status
-7- git push
+7- git remote add origin "https://github.com/AlinnOliveira/treinamento.git"
+8- git remote - v: (lista os diretórios remotos) 
+9- git push origin master (master é a branch que estamos enviando o nosso código)
 
