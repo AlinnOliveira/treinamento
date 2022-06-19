@@ -1,5 +1,5 @@
 # Treinamento DIO
-Treinamento estudos da DIO - Digital Innovation One 
+Treinamento e estudos na DIO - Digital Innovation One 
 
 ## Índice
 1- Materiais de estudos
