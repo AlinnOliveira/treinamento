@@ -11,5 +11,6 @@
    git config --global user.name
 4- git add *
 5- git commit -m "texto de descrição do commit"
-6- git push
+6- git status
+7- git push
 
