@@ -6,7 +6,7 @@
 
 ## Conectando com o repositório via SSH
 
-   1- ssh-keygen -t ed25519 -C <e-mail>
+   1- ssh-keygen -t ed25519 -C /e-mail/
 
    2- entrar com uma senha
    
@@ -14,7 +14,7 @@
    
    4- ls
    
-   5- VER O QUE HÁ NO ARQUIVO: cat <nome da chava pública>
+   5- VER O QUE HÁ NO ARQUIVO: cat /nome da chava pública/
    
    6- copiar a chave e e-mail e COLAR NO GitHub - chaves SSH
 ## Passos:
