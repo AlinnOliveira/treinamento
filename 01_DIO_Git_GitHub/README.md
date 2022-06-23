@@ -22,7 +22,9 @@
    
    8- Adicionar ao agente a chave privada: ssh-add *caminho da chave, se já estiver no diretório coloque apenas o nome do arquivo da chave PRIVADA*
    
-   9- Clonar um projeto do GitHub (baixar o projeto para local): git clone *caminho SSH*
+   9- Clonar um projeto do GitHub (baixar o projeto para local): vá para seu workspace (cd .. ou cd *nome dir*) e
+   
+   10- git clone *caminho SSH*
    
    
 ## Passos:
