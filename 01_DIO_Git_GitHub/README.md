@@ -10,7 +10,7 @@
 
    2- entrar com uma senha
    
-   3- Entrar na pasta onde estão as chaves: cd /Users/<user>/.ssh
+   3- Entrar na pasta onde estão as chaves: cd /Users/*user*/.ssh
    
    4- ls
    
