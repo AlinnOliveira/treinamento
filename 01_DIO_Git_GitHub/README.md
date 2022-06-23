@@ -4,6 +4,19 @@
 - Criar um repositório remoto distribuído usando o Git e GitHub
 - Organizar da melhor forma o material de estudo
 
+## Conectando com o repositório via SSH
+
+   1- ssh-keygen -t ed25519 -C <e-mail>
+
+   2- entrar com uma senha
+   
+   3- Entrar na pasta onde estão as chaves: cd /Users/<user>/.ssh
+   
+   4- ls
+   
+   5- VER O QUE HÁ NO ARQUIVO: cat <nome da chava pública>
+   
+   6- copiar a chave e e-mail e COLAR NO GitHub - chaves SSH
 ## Passos:
 1- Git Bash Here: pasta local (workspace)
 
