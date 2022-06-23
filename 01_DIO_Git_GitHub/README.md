@@ -14,9 +14,15 @@
    
    4- ls
    
-   5- VER O QUE HÁ NO ARQUIVO: cat /nome da chava pública/
+   5- VER O QUE HÁ NO ARQUIVO: cat *nome da chava pública*
    
    6- copiar a chave e e-mail e COLAR NO GitHub - chaves SSH
+   
+   7- Criar um processo: eval (ssh-agent -s)
+   
+   8- Adicionar ao agente a chave privada: ssh-add *caminho da chave, se já estiver no diretório coloque apenas o nome do arquivo da chave PRIVADA*
+   
+   
 ## Passos:
 1- Git Bash Here: pasta local (workspace)
 
