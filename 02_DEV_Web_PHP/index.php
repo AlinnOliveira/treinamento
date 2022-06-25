@@ -6,12 +6,14 @@
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-  
-  $( function() {
-    $( "#accordion" ).accordion();
-  } );
-  </script>
 
+
+        <script>
+            $( function() {
+                $( "#accordion" ).accordion();
+            } );
+        </script>
+  
         <style type="text/css">
             .linha {
                 font.weigth: bold;
@@ -34,6 +36,9 @@
 
             }
         ?>
+
+<br /><br /><br />
+
     </body>
 
     <script type="text/javascript">
