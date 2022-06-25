@@ -10,9 +10,10 @@
    
    2- Apache -> Config -> httpd.conf 
    
-   3- Look for: DocumentRoot  "C:/workspace"
+   3- Look for: DocumentRoot  e colocar o diretório de seu projeto 
+   "C:/workspace"
    <Diretory "C:/workspace"
    
    4- Start (apache - verde 0k)
    
-   5- Criar suas páginas - notepad++
+   5- Criar suas páginas - notepad++ ou Visual Studio Code
