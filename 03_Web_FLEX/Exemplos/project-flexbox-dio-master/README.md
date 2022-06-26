@@ -1,2 +1,3 @@
 # project flexbox DIO
-da pro https://gitlab.com/karensantos/
+da professora Karen Santos
+fonte: https://gitlab.com/karensantos/
