@@ -2,8 +2,8 @@
 Treinamento e estudos na DIO - Digital Innovation One 
 
 ## Índice
-1- Materiais de estudos - ImpulsoJavaScritpEvolution
+0- Materiais de estudos - ImpulsoJavaScritpEvolution
 
-2- Realizando o 1º Desafio Git e GitHub - 01_DIO_Git_GitHub
+1- Realizando o 1º Desafio Git e GitHub - 01_DIO_Git_GitHub
 
-3- 
+2- Atividade DEV WEB com PHP
