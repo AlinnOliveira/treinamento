@@ -11,7 +11,10 @@
    - Criar páginas .html utilizando Flex
 
    - Para visualizar o que criou usando Flex (preview)
-      - ctrl + shift + P 
-      - show Live Server Preview
+      - ctrl + shift + P -> show
+      - Install this plugin on your Visual Studio -> Live Server Preview
+
+   - Usar um app para codificar em FLEX - https://www.figma.com/
+
 
 
