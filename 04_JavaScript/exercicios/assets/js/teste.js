@@ -16,3 +16,5 @@ function returnEvenValues(array){
 
 let array = [1,3,6,7,9,11,13,14,16];
 returnEvenValues(array);
+var d = Date();
+console.log("Hoje é: "+ d.getDate() + "/" (d.getMonth()+1));
