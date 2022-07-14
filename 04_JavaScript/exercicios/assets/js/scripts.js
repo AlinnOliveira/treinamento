@@ -1,15 +1,17 @@
 console.log("Hello World!");
 
-//document.getElementById('seuNomeHTML').innerHTML = "Bem Vindo(a), ";
-//var BEM_VINDO = document.getElementById('seuNomeHTML');
-//var person = prompt("Qual seu nome?  ");
+document.getElementById('seuNomeHTML').innerHTML = "Bem Vindo(a), ";
+var BEM_VINDO = document.getElementById('seuNomeHTML');
+var person = prompt("Qual seu nome?  ");
 //BEM_VINDO.innerHTML.concat(person);
-/*
+
 function seuNome(person){
     //console.log(document.getElementById(seuNomeHTML).innerText + person);
-    BEM_VINDO.innerHTML().concat(person);  
+    BEM_VINDO.innerHTML.concat(person);  
 }
-*/
+
+seuNome(person);
+
 let count = 0;
 
 const CURRENT_NUMBER = document.getElementById('currentNumber');
