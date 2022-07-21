@@ -28,6 +28,9 @@ app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+
+app.use("/availability", require("./routes/availabilityRoutes"));
+app.use("/reserve", require("./routes/reservationRoutes"));
 // foi deletado o arquivos users.js
 //app.use('/users', usersRouter);
 

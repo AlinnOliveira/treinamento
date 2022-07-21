@@ -198,7 +198,12 @@ _____________________________________________
 - Abrir terminal na pasta client e testar o sistema
   yarn start
 
-- Em bookmjs
+- Em book.js
   Fazer a parte de front end e tabelas do banco MongoDB
-  yarn start
+  yarn start (o sistema roda mas sem assentos disponíveis pois temos que criar o arquivo
+  de vialidade de assentos)
+ 
+- Em API routes
+  criar arquivo avaibilityRoute.js
+                reservationRoute.js
  
