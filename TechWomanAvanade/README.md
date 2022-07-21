@@ -138,8 +138,67 @@ ___________________________________________________________
 - Em app.js acrescentar o dotenv
   require("dotenv").config();
 
+- Criar em API o arquivo .env com a configuração do MongoDB
+  MONGO_URL=mongodb://localhost/voeDio
 
-  
+- Em app.js definir o banco, conectar e verificar conexão
+  //MONGO DB
+  const mongoose = require("mongoose");
+  mongoose.connect(process.env.MONGO_URL,{
+      useUnifiedTopoLogy: true,
+      useNewUrlParser: true
+  });
+  var db = mongoose.connection;
 
+  db.on("error", console.error.bind(console, "connection error:"));
 
+  //Verificando a conexão com o banco
+  db.on("error", console.error.bind(console, "connection error:"));
+  db.once("open", _ => {
+      console.log("Conectado com o banco")
+  });
 
+_____________________________________________
+//MENSAGERIA - RabbitMQ
+- Necessário NODE.JS e RabbitMQ (necessário Erlang)
+- Abrir RabbitMQ Command prompt
+  rabbitmq-plugins enable rabbitmq_management
+
+- Abrir no navegador
+  localhost:15672
+  usuário e senha: guest
+
+- criar pasta na raiz do projeto: rabbitmq
+
+- No terminal dentro da pasta criada
+  npm init -y
+  npm install amqplib
+
+- criar os atuadores: quem vai enviar e receber as mensagens
+  criar arquivo: sender.js
+
+- para testar o envio de mensagem, no terminal dentro da pasta rabbitmq
+  node .\sender.js
+
+- verificar no rabbitmq no navegador a variavel codingtest sendo enviada
+
+- criar o arquivo: receiver.js
+- testar no terminal se funcionou
+  node .\receiver.js
+
+- post e get (diferenças)
+  post enviar dados para onde definirmos,cria
+  get - recebe os dados
+
+- criar a pasta componentes 
+  main.js  navbar.js  table.js  thanYou.js
+
+- Em Apps.js fazer as importações dos arquivos
+
+- Abrir terminal na pasta client e testar o sistema
+  yarn start
+
+- Em bookmjs
+  Fazer a parte de front end e tabelas do banco MongoDB
+  yarn start
+ 
