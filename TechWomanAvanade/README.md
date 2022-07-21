@@ -186,9 +186,7 @@ _____________________________________________
 - testar no terminal se funcionou
   node .\receiver.js
 
-- post e get (diferenças)
-  post enviar dados para onde definirmos,cria
-  get - recebe os dados
+___________________________________
 
 - criar a pasta componentes 
   main.js  navbar.js  table.js  thanYou.js
