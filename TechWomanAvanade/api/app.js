@@ -52,10 +52,10 @@ const sendMail = async(msg) => {
 
 sendMail({
   //usar o email que foi cadastrado no SendGrid
-  to: "aline_oliveira@yahoo.com",
-  from: "aline_oliveira@yahoo.com",
+  to: "aline.castro.oliveira@gmail.com",
+  from: "aline.castro.oliveira@gmail.com",
   subject: "Confirmação de cadastro no sistema",
-  text: "Parabéns, você acaba de se registrar no sistema Voe Dio",
+  text: "Parabéns, você acaba de se registrar no sistema Voe Dio"
 });
 
 module.exports = app;
