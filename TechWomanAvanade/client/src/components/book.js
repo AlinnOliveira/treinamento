@@ -45,7 +45,13 @@ export default props => {
     "2PM",
     "3PM",
     "4PM",
-    "5PM"
+    "5PM",
+    "6PM",
+    "7PM",
+    "8PM",
+    "9PM",
+    "10PM",
+    "11PM",
   ]);
   // Validação básica da reserva
   const [reservationError, setReservationError] = useState(false);
