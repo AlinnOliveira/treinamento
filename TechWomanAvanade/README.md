@@ -238,3 +238,5 @@ sendgrid.com/
   npm install @sendgrid/mail
 
 - Codar o envio do e-mail em app.js
+
+-->> NÃO ENVIAR SUA CHAVE DO SEND GRID PARA O GITHUB
