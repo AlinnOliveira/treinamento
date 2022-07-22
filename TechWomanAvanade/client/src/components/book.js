@@ -15,7 +15,7 @@ import Table from "./table";
 export default props => {
   const [totalTables, setTotalTables] = useState([]);
 
-  // User's selections
+  // Seleções do usuário
   const [selection, setSelection] = useState({
     table: {
       name: null,
@@ -27,15 +27,15 @@ export default props => {
     size: 0
   });
 
-  // User's booking details
+  // Detalhes da reserva do usuário
   const [booking, setBooking] = useState({
     name: "",
     phone: "",
     email: ""
   });
 
-  // List of potential locations
-  const [locations] = useState(["Curitiba", "Lavras", "Varginha", "São Paulo"]);
+  // Lista dos locais
+  const [locations] = useState(["Curitiba", "Uberaba", "Varginha", "Lavras"]);
   const [times] = useState([
     "9AM",
     "10AM",
@@ -47,23 +47,23 @@ export default props => {
     "4PM",
     "5PM"
   ]);
-  // Basic reservation "validation"
+  // Validação básica da reserva
   const [reservationError, setReservationError] = useState(false);
-//retorna data e hora selecionado pelo user
+
   const getDate = _ => {
     const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outrubro",
+      "Novembro",
+      "Dezembro"
     ];
     const date =
       months[selection.date.getMonth()] +
@@ -77,14 +77,14 @@ export default props => {
     const datetime = new Date(date + " " + time);
     return datetime;
   };
-//verificar se tem disponibilidade de assentos no horário para este dia
+
   const getEmptyTables = _ => {
     let tables = totalTables.filter(table => table.isAvailable);
     return tables.length;
   };
 
   useEffect(() => {
-    // verificar disponibilidade de assentos na data e hora selecionados
+    // Checar disponibilidade de horário 
     if (selection.time && selection.date) {
       (async _ => {
         let datetime = getDate();
@@ -98,7 +98,7 @@ export default props => {
           })
         });
         res = await res.json();
-        // Filter available tables with location and group size criteria
+        //Filtrar locais
         let tables = res.tables.filter(
           table =>
             (selection.size > 0 ? table.capacity >= selection.size : true) &&
@@ -109,17 +109,16 @@ export default props => {
         setTotalTables(tables);
       })();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selection.time, selection.date, selection.size, selection.location]);
 
-  // Fazer a reserva
+  // Fazer a reserva se todos os dados estiverem preenchidos
   const reserve = async _ => {
     if (
       (booking.name.length === 0) |
       (booking.phone.length === 0) |
       (booking.email.length === 0)
     ) {
-      console.log("Complete seus dados");
+      console.log("Dados incompletos");
       setReservationError(true);
     } else {
       const datetime = getDate();
@@ -135,12 +134,12 @@ export default props => {
         })
       });
       res = await res.text();
-      console.log("Reservado: " + res);
-      props.setPage(2); //página de obrigado
+      console.log("Reserved: " + res);
+      props.setPage(2);
     }
   };
 
-  // selecionando na tabela - situação do que está sendo selecionado
+  // Selecionando a situação 
   const selectTable = (table_name, table_id) => {
     setSelection({
       ...selection,
@@ -151,8 +150,8 @@ export default props => {
     });
   };
 
-  // Gerando o menu responsivo com os assentos disponíveis
-  const getSizes  = _ => {
+  // Criando parte do menu
+  const getSizes = _ => {
     let newSizes = [];
 
     for (let i = 1; i < 8; i++) {
@@ -178,7 +177,7 @@ export default props => {
     return newSizes;
   };
 
-  //Gerando o menu de localização
+  // Gerando o menu de locais
   const getLocations = _ => {
     let newLocations = [];
     locations.forEach(loc => {
@@ -204,7 +203,7 @@ export default props => {
     return newLocations;
   };
 
-  // Gerando o menu de horários disponíveis
+  // Gerando o menu de horários
   const getTimes = _ => {
     let newTimes = [];
     times.forEach(time => {
@@ -230,7 +229,7 @@ export default props => {
     return newTimes;
   };
 
-  // Criando as tabelas com os assentos disponíveis
+  // Criando as tabelas
   const getTables = _ => {
     console.log("Obtendo as tabelas");
     if (getEmptyTables() > 0) {
@@ -268,7 +267,7 @@ export default props => {
       <Row noGutters className="text-center align-items-center assento-cta">
         <Col>
           <p className="looking-for-assento">
-            {!selection.table.id ? "Reserve um assento" : "Confirme seus dados"}
+            {!selection.table.id ? "Reserve" : "Confirme seus dados"}
             <i
               className={
                 !selection.table.id
@@ -311,7 +310,7 @@ export default props => {
                     };
                     setSelection(newSel);
                   } else {
-                    console.log("Data Inválida");
+                    console.log("Data inválida.");
                     let newSel = {
                       ...selection,
                       table: {
@@ -367,9 +366,9 @@ export default props => {
                 getEmptyTables() > 0 ? (
                   <div>
                     <div className="table-key">
-                      <span className="empty-table"></span> &nbsp; Available
+                      <span className="empty-table"></span> &nbsp; Disponíveis
                       &nbsp;&nbsp;
-                      <span className="full-table"></span> &nbsp; Unavailable
+                      <span className="full-table"></span> &nbsp; Indisponíveis
                       &nbsp;&nbsp;
                     </div>
                     <Row noGutters>{getTables()}</Row>

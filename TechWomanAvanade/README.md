@@ -214,7 +214,27 @@ ___________________________________
   criar arquivos allTables.jason  allTables.js generateFakeData.js
 
 - Dentro de API no terminal. Instalar Banco de Dados Mongoose
+  Instalar MongoDb no Windows depois no ambiente de desenvolvimento
   npm install mongoose
+
+- Iniciar o sistema - testar
+  yarn start
+
+________________________________________
+//Envio de E-mails
  
-- Startar o sistema
-  yarn start  
+- Instalar o Send Grid, fazer seu registro
+sendgrid.com/
+
+- Configurar o SendGrid: Settings -> API Keys
+  - criar uma chave: nome e acesso restrito e habilitar: Mail Send - clicar em create and view
+  - copiar a key gerada 
+
+- Registrar a key gerada no arquivo .env
+
+- Atualizar app.js - chamar sendgrid
+
+- No terminal, e API instalar sendgrid no sistema
+  npm install @sendgrid/mail
+
+- Codar o envio do e-mail em app.js
