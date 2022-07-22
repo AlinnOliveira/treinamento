@@ -201,7 +201,20 @@ ___________________________________
   yarn start (o sistema roda mas sem assentos disponíveis pois temos que criar o arquivo
   de vialidade de assentos)
  
+ _______________________________________________
+ Back-end  e Banco
 - Em API routes
   criar arquivo avaibilityRoute.js
                 reservationRoute.js
+
+- Em models
+  criar arquivos day.js reservation.js table.ja
+
+- Em data
+  criar arquivos allTables.jason  allTables.js generateFakeData.js
+
+- Dentro de API no terminal. Instalar Banco de Dados Mongoose
+  npm install mongoose
  
+- Startar o sistema
+  yarn start  
