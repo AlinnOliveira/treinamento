@@ -1,4 +1,4 @@
-package one.dio.me;
+package poo.src.one.dio.me.veiculo;
 /*
  Bootcamp - Exercício de introdução POO
 */
@@ -8,10 +8,10 @@ public class Carro {
     String modelo;
     String cor;
 
-    Carro(){
+    public Carro(){
     }
 
-    Carro(String cor, String modelo, int capacidadeTanque){
+    public Carro(String cor, String modelo, int capacidadeTanque){
         this.cor = cor;
         this.modelo = modelo;
         this.capacidade = capacidadeTanque;
@@ -20,9 +20,11 @@ public class Carro {
     public int getCapacidade() {
         return capacidade;
     }
+
     public void setCapacidade(int capacidade) {
         this.capacidade = capacidade;
     }
+
     public String getModelo() {
         return modelo;
     }
@@ -36,11 +38,12 @@ public class Carro {
         this.cor = cor;
     }
    
-    double totalValorTanque(double valorCombustivel){
+    public double totalValorTanque(double valorCombustivel){
         return capacidade * valorCombustivel;
     }
 
 
 }
+
 
 
